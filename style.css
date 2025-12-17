@@ -1900,6 +1900,105 @@ body {
     display: none !important;
 }
 
+/* بداية التعديل بتاعى */
+<style>
+    /* تنسيقات عامة للصفحة (لم تتغير) */
+    body {
+        font-family: 'Cairo', sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* --- بداية كود الكارت (نسخة مصغرة) --- */
+    .product-card {
+        background: white;
+        /* التعديل 1: تقليل العرض من 300 إلى 240 */
+        width: 240px;
+        border-radius: 15px; /* تصغير انحناء الحواف قليلاً */
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        position: relative;
+    }
+
+    .product-card:hover {
+        /* تقليل مسافة الارتفاع عند التحويم لتناسب الحجم الجديد */
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .image-box {
+        /* التعديل 2: تقليل ارتفاع الصورة من 200 إلى 160 */
+        height: 160px;
+        background: linear-gradient(45deg, #ff6b6b, #5563de);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        /* تصغير حجم خط النص البديل للصورة */
+        font-size: 20px;
+    }
+
+    .content-box {
+        /* التعديل 3: تقليل المسافات الداخلية من 25 إلى 15 */
+        padding: 15px;
+        text-align: center;
+    }
+
+    .content-box h3 {
+        margin: 0;
+        color: #333;
+        /* التعديل 4: تصغير عنوان المنتج */
+        font-size: 18px;
+    }
+
+    .price {
+        color: #5563de;
+        /* التعديل 5: تصغير حجم السعر */
+        font-size: 20px;
+        font-weight: bold;
+        margin: 8px 0;
+        display: block;
+    }
+
+    .description {
+        color: #777;
+        /* التعديل 6: تصغير حجم الوصف قليلاً */
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 10px; /* مسافة إضافية عشان الزرار ميكونش لازق */
+    }
+
+    .add-to-cart-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        /* تقليل مساحة الزر الداخلية */
+        padding: 12px;
+        background: #5563de;
+        color: white;
+        border: none;
+        font-weight: bold;
+        /* تصغير خط الزر */
+        font-size: 14px;
+        cursor: pointer;
+        transform: translateY(100%);
+        transition: all 0.4s ease;
+    }
+
+    .product-card:hover .add-to-cart-btn {
+        transform: translateY(0);
+    }
+    /* --- نهاية كود الكارت --- */
+</style>
+
+
 /* Services Section */
 .services-section-new {
     margin-top: 3rem;
@@ -2318,3 +2417,4 @@ body {
         height: 200px;
     }
 }
+
